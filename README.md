@@ -1,38 +1,73 @@
-Overview
-This is a fully responsive E-Commerce Website built using only HTML, CSS, and JavaScript. It includes basic functionalities such as product listing, adding products to the cart, and a checkout page. This project is designed for learning purposes and demonstrates how to create a simple e-commerce user interface without any backend.
+## Overview
+This is a fully responsive **E-Commerce Website** built using only **HTML**, **CSS**, and **JavaScript**. It includes basic functionalities such as product listing, adding products to the cart, and a checkout page. This project is designed for learning purposes and demonstrates how to create a simple e-commerce user interface without any backend.
 
-Features
-Product listing with categories
-Add to cart functionality
-Shopping cart with price updates
-Checkout form (static)
-Responsive layout for desktop and mobile
-Tech Stack
-Frontend: HTML, CSS, JavaScript
-No Backend: This project does not include a backend or database functionality. All data is handled locally using JavaScript.
-Installation
-Prerequisites
-A web browser (Chrome, Firefox, Safari, etc.)
-A text editor to modify the code (VSCode, Sublime, etc.)
-Steps to Setup
-Clone the repository:
+## Features
+- Product listing with categories
+- Add to cart functionality
+- Shopping cart with price updates
+- Checkout form (static)
+- Responsive layout for desktop and mobile
 
-git clone https://github.com/Gokulbharath/e-commerce-website.git
-Navigate to the project directory:
+## Tech Stack
+- **Frontend:** HTML, CSS, JavaScript
+- **No Backend**: This project does not include a backend or database functionality. All data is handled locally using JavaScript.
 
-cd e-commerce-website
-Open index.html in your browser to start browsing the e-commerce site.
+## Installation
+### Prerequisites
+- A web browser (Chrome, Firefox, Safari, etc.)
+- A text editor to modify the code (VSCode, Sublime, etc.)
 
-Usage
-Product Listing:
+### Steps to Setup
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Gokulbharath/e-commerce-website.git
+    ```
 
-Browse products displayed on the home page.
-Use JavaScript to dynamically add products to the cart.
-Shopping Cart:
+2. Navigate to the project directory:
+    ```bash
+    cd e-commerce-website
+    ```
 
-Add products to the cart and view the total price.
-Remove items from the cart.
-Adjust quantities of products directly in the cart.
-Checkout:
+3. Open `index.html` in your browser to start browsing the e-commerce site.
 
-The checkout page includes a static form to simulate order processing (no backend functionality).
+## Usage
+- **Product Listing:**
+    - Browse products displayed on the home page.
+    - Use JavaScript to dynamically add products to the cart.
+
+- **Shopping Cart:**
+    - Add products to the cart and view the total price.
+    - Remove items from the cart.
+    - Adjust quantities of products directly in the cart.
+
+- **Checkout:**
+    - The checkout page includes a static form to simulate order processing (no backend functionality).
+  
+Screenshots
+
+Dashboard
+
+![Screenshot 2024-12-21 112621](https://github.com/user-attachments/assets/eb5722ce-1b22-4125-a878-a11126bf38c0)
+
+
+Cart Page
+
+![Screenshot 2024-12-21 112637](https://github.com/user-attachments/assets/41d15adf-125d-47e5-8c7c-b51188769fcb)
+
+
+Detial Page
+
+![Screenshot 2024-12-21 112656](https://github.com/user-attachments/assets/d1a42596-0478-4cb3-a235-eeaddbccd902)
+
+
+Payment Page
+
+![Screenshot 2024-09-23 112956](https://github.com/user-attachments/assets/1cab3608-c963-4bbc-88f9-f71b10ca6f82)
+
+Oder Sucess Page
+
+![Screenshot 2024-09-23 113007](https://github.com/user-attachments/assets/82228aad-bfee-453b-925a-6e2fe7458e05)
+
+
+
+
