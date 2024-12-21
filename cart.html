@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KK Shopiee Cart</title>
+    <style>
+        body {
+            background-color: #9fdf9f;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cart-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .cart-items {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cart-items li {
+            margin: 10px 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .cart-total {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .checkout-button {
+            padding: 10px 20px;
+            background-color: #2874f0;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+            width: 100%;
+            font-size: 18px;
+            border-radius: 4px;
+        }
+
+        .checkout-button:hover {
+            background-color: #1e5ac8;
+        }
+
+        .order-placed {
+            display: none;
+            background-color: green;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-family: "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Your Cart</h1>
+        <ul class="cart-items" id="cartItems">
+            <!-- Cart items will be inserted here -->
+        </ul>
+        <div class="cart-total" id="totalAmount">
+            <!-- Total amount will be displayed here -->
+        </div>
+        <button class="checkout-button" id="checkoutButton">Checkout</button>
+    </div>
+
+    <footer>
+        <p><b>&#9742; Contact number: 9944699989<br>
+        &#9993; Email: kksupershopi2023@mail.com<br>
+        &#127752; Instagram: @kksupershoppie</b></p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cartItemsList = document.getElementById('cartItems');
+            const totalAmount = document.getElementById('totalAmount');
+            const checkoutButton = document.getElementById('checkoutButton');
+            const cartContent = JSON.parse(localStorage.getItem('cartContent')) || [];
+
+            function updateCartView() {
+                cartItemsList.innerHTML = '';
+                let total = 0;
+                cartContent.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = `${item.name} - ₹${item.price.toFixed(2)}`;
+                    cartItemsList.appendChild(li);
+                    total += item.price;
+                });
+                totalAmount.textContent = `Total: ₹${total.toFixed(2)}`;
+            }
+
+            checkoutButton.addEventListener('click', () => {
+                localStorage.removeItem('cartContent');
+                window.location.href = "detail123.html"; // Navigate to the order placed page
+            });
+
+            updateCartView();
+        });
+    </script>
+</body>
+</html>

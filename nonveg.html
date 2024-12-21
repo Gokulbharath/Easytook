@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KK Shopiee - Dish Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+          header {
+            background-color: #9fdf9f;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        .logo {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 10px;
+            font-family: "Courier New", monospace;
+        }
+
+        .search-bar {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            width: 300px;
+            margin-right: 10px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .user-menu {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .user-menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+
+        .dish-details {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 5px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dish-details img {
+            width: 50%;
+            height: 50%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .dish-details h2 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dish-details p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .add-to-cart {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #2874f0;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 18px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #1e5ac8;
+        }
+
+        footer {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-family: "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="KK Shopiee Logo">
+                <a href="#">KK<br>Super Shoppie</a>
+            </div>
+            <div class="user-menu">
+                <a href="cart.html" id="cartButton">CART</a>
+            </div>
+        </div>
+    </header>
+<div class="dish-details">
+    <img src="cg.jpeg" alt="Chicken Gravy">
+    <h2>Chicken Gravy(COMBO)</h2>
+    <p>A rich and flavorful chicken curry.</p>
+    <p>Price: ₹180</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Chicken</li>
+        <li>Onions</li>
+        <li>Tomatoes</li>
+        <li>Ginger-garlic paste</li>
+        <li>Green chilies</li>
+        <li>Coriander powder</li>
+        <li>Cumin powder</li>
+        <li>Turmeric powder</li>
+        <li>Red chili powder</li>
+        <li>Garam masala powder</li>
+        <li>Curry leaves</li>
+        <li>Coconut milk</li>
+        <li>Oil</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Sauté Ingredients:</strong> Sauté onions, green chilies, and ginger-garlic paste in oil until golden brown.</li>
+        <li><strong>Add Spices:</strong> Add coriander powder, cumin powder, turmeric powder, red chili powder, and garam masala powder. Sauté until aromatic.</li>
+        <li><strong>Cook Chicken:</strong> Add chicken pieces, tomatoes, and curry leaves. Cook until chicken is tender.</li>
+        <li><strong>Add Coconut Milk:</strong> Pour coconut milk and simmer until gravy thickens.</li>
+        <li><strong>Adjust Seasoning:</strong> Adjust salt and spices according to taste.</li>
+        <li><strong>Serve:</strong> Serve hot with rice or bread.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('chickenGravy', 180)">Add to Cart</button>
+</div>
+
+<div class="dish-details">
+    <img src="mutt.jpeg" alt="Mutton Gravy">
+    <h2>Mutton Gravy(COMBO)</h2>
+    <p>A hearty and spicy mutton curry.</p>
+    <p>Price: ₹220</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Mutton</li>
+        <li>Onions</li>
+        <li>Tomatoes</li>
+        <li>Ginger-garlic paste</li>
+        <li>Green chilies</li>
+        <li>Coriander powder</li>
+        <li>Cumin powder</li>
+        <li>Turmeric powder</li>
+        <li>Red chili powder</li>
+        <li>Garam masala powder</li>
+        <li>Curry leaves</li>
+        <li>Oil</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Sauté Ingredients:</strong> Sauté onions, green chilies, and ginger-garlic paste in oil until golden brown.</li>
+        <li><strong>Add Spices:</strong> Add coriander powder, cumin powder, turmeric powder, red chili powder, and garam masala powder. Sauté until aromatic.</li>
+        <li><strong>Cook Mutton:</strong> Add mutton pieces and tomatoes. Cook until mutton is tender.</li>
+        <li><strong>Simmer:</strong> Add water if needed, cover, and simmer until gravy thickens.</li>
+        <li><strong>Adjust Seasoning:</strong> Adjust salt and spices according to taste.</li>
+        <li><strong>Serve:</strong> Serve hot with rice or bread.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('muttonGravy', 220)">Add to Cart</button>
+</div>
+
+
+<div class="dish-details">
+    <img src="fish.jpeg" alt="Fish Kulambu">
+    <h2>Fish Kulambu(COMBO)</h2>
+    <p>A tangy and spicy South Indian fish curry.</p>
+    <p>Price: ₹200</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Fish (preferably pomfret or kingfish)</li>
+        <li>Onions</li>
+        <li>Tomatoes</li>
+        <li>Tamarind</li>
+        <li>Ginger-garlic paste</li>
+        <li>Green chilies</li>
+        <li>Coriander powder</li>
+        <li>Cumin powder</li>
+        <li>Turmeric powder</li>
+        <li>Red chili powder</li>
+        <li>Mustard seeds</li>
+        <li>Fenugreek seeds</li>
+        <li>Curry leaves</li>
+        <li>Coconut milk</li>
+        <li>Oil</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Prepare Tamarind Extract:</strong> Soak tamarind in water and extract the juice.</li>
+        <li><strong>Sauté Ingredients:</strong> Sauté onions, green chilies, and ginger-garlic paste in oil until golden brown.</li>
+        <li><strong>Add Spices:</strong> Add coriander powder, cumin powder, turmeric powder, red chili powder, and salt. Sauté until aromatic.</li>
+        <li><strong>Add Fish:</strong> Add fish pieces and tomatoes. Cook for a few minutes.</li>
+        <li><strong>Add Tamarind Extract:</strong> Pour tamarind extract and simmer until fish is cooked and gravy thickens.</li>
+        <li><strong>Tempering:</strong> Heat oil, add mustard seeds, fenugreek seeds, and curry leaves. Pour over the kulambu and mix well.</li>
+        <li><strong>Serve:</strong> Serve hot with rice.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('fishKulambu', 200)">Add to Cart</button>
+</div>
+
+<div class="dish-details">
+    <img src="c65.jpeg" alt="Chicken 65">
+    <h2>Chicken 65(COMBO)</h2>
+    <p>A spicy and crispy South Indian chicken starter.</p>
+    <p>Price: ₹150</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Chicken (boneless)</li>
+        <li>Curd (yogurt)</li>
+        <li>Ginger-garlic paste</li>
+        <li>Corn flour</li>
+        <li>Red chili powder</li>
+        <li>Turmeric powder</li>
+        <li>Garam masala powder</li>
+        <li>Curry leaves</li>
+        <li>Green chilies</li>
+        <li>Coriander leaves</li>
+        <li>Oil</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Marinate Chicken:</strong> Marinate chicken pieces with curd, ginger-garlic paste, corn flour, red chili powder, turmeric powder, garam masala powder, and salt. Rest for 30 minutes.</li>
+        <li><strong>Fry Chicken:</strong> Heat oil, fry marinated chicken until crispy and golden brown.</li>
+        <li><strong>Temper:</strong> Heat oil, add curry leaves, green chilies, and toss fried chicken pieces in it.</li>
+        <li><strong>Garnish:</strong> Garnish with coriander leaves and serve hot.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('chicken65', 150)">Add to Cart</button>
+</div>
+
+<div class="dish-details">
+    <img src="cso.jpeg" alt="Chicken Soup">
+    <h2>Chicken Soup(COMBO)</h2>
+    <p>A comforting and nourishing chicken soup.</p>
+    <p>Price: ₹100</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Chicken (with bones)</li>
+        <li>Carrots</li>
+        <li>Celery</li>
+        <li>Onions</li>
+        <li>Garlic</li>
+        <li>Ginger</li>
+        <li>Bay leaves</li>
+        <li>Black peppercorns</li>
+        <li>Coriander leaves</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Prepare Broth:</strong> Boil chicken with onions, garlic, ginger, bay leaves, and black peppercorns until chicken is cooked and flavorful broth is obtained.</li>
+        <li><strong>Add Vegetables:</strong> Add diced carrots, celery, and cook until vegetables are tender.</li>
+        <li><strong>Season:</strong> Season with salt and pepper as per taste.</li>
+        <li><strong>Serve:</strong> Garnish with chopped coriander leaves and serve hot.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('chickenSoup', 100)">Add to Cart</button>
+</div>
+
+<div class="dish-details">
+    <img src="ms.jpeg" alt="Mutton Soup">
+    <h2>Mutton Soup(COMBO)</h2>
+    <p>A hearty and nutritious mutton soup.</p>
+    <p>Price: ₹120</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Mutton (with bones)</li>
+        <li>Carrots</li>
+        <li>Celery</li>
+        <li>Onions</li>
+        <li>Garlic</li>
+        <li>Ginger</li>
+        <li>Bay leaves</li>
+        <li>Black peppercorns</li>
+        <li>Coriander leaves</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Prepare Broth:</strong> Boil mutton with onions, garlic, ginger, bay leaves, and black peppercorns until mutton is tender and flavorful broth is obtained.</li>
+        <li><strong>Add Vegetables:</strong> Add diced carrots, celery, and cook until vegetables are tender.</li>
+        <li><strong>Season:</strong> Season with salt and pepper as per taste.</li>
+        <li><strong>Serve:</strong> Garnish with chopped coriander leaves and serve hot.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('muttonSoup', 120)">Add to Cart</button>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+	
+<br>
+<br>
+<br>
+<br>
+    <footer>
+        <p><b>&#9742; Contact number: 9944699989<br>
+        &#9993; Email: kksupershopi2023@mail.com<br>
+        &#127752; Instagram: @kksupershoppie</b></p>
+    </footer>
+
+    <script>
+        function addToCart(name, price) {
+            const item = { name: name, price: price };
+            let cartContent = JSON.parse(localStorage.getItem('cartContent')) || [];
+            cartContent.push(item);
+            localStorage.setItem('cartContent', JSON.stringify(cartContent));
+            alert('Item added to cart!');
+        }
+    </script>
+</body>
+</html>

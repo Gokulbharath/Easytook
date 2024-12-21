@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KK Shopiee - Dish Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+          header {
+            background-color: #9fdf9f;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        .logo {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 10px;
+            font-family: "Courier New", monospace;
+        }
+
+        .search-bar {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            width: 300px;
+            margin-right: 10px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .user-menu {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .user-menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+
+        .dish-details {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 5px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dish-details img {
+            width: 50%;
+            height: 50%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .dish-details h2 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dish-details p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .add-to-cart {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #2874f0;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 18px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #1e5ac8;
+        }
+
+        footer {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-family: "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="KK Shopiee Logo">
+                <a href="#">KK<br>Super Shoppie</a>
+            </div>
+            <div class="user-menu">
+                <a href="cart.html" id="cartButton">CART</a>
+            </div>
+        </div>
+    </header>
+    <div class="dish-details">
+    <img src="biryani.jpeg" alt="Biryani">
+    <h2>Chicken Biryani(COMBO)</h2>
+    <p>Delicious biryani made with fragrant rice, spices, and tender meat.</p>
+    <p>Price: ₹200</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Basmati rice</li>
+        <li>Onions</li>
+        <li>Tomatoes</li>
+        <li>Yogurt</li>
+        <li>Ginger-garlic paste</li>
+        <li>Mint leaves</li>
+        <li>Coriander leaves</li>
+        <li>Green chilies</li>
+        <li>Red chili powder</li>
+        <li>Turmeric powder</li>
+        <li>Garam masala powder</li>
+        <li>Bay leaves</li>
+        <li>Cloves</li>
+        <li>Cardamom pods</li>
+        <li>Cinnamon stick</li>
+        <li>Ghee</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Marinate Chicken:</strong> Mix chicken pieces with yogurt, ginger-garlic paste, red chili powder, turmeric powder, and salt. Marinate for at least 1 hour.</li>
+        <li><strong>Cook Rice:</strong> Boil the rice with bay leaves, cloves, cardamom, and cinnamon stick until 70% cooked. Drain and set aside.</li>
+        <li><strong>Fry Onions:</strong> Heat ghee in a large pot. Add sliced onions and fry until golden brown. Remove half of the fried onions and set aside.</li>
+        <li><strong>Prepare Chicken:</strong> In the same pot, add marinated chicken, chopped tomatoes, green chilies, mint, and coriander leaves. Cook until the chicken is tender.</li>
+        <li><strong>Layer and Cook:</strong> Layer the partially cooked rice over the chicken mixture. Top with the reserved fried onions, sprinkle garam masala powder, and drizzle some ghee. Cover tightly and cook on low heat (dum) for 20-25 minutes.</li>
+    </ol>
+   <h3>Watch the Recipe Video:</h3>
+    <a href="https://youtu.be/T74qMNYBKGU?si=N7TdRVTQgagOJ-CR" target="_blank">Watch on YouTube</a>
+    <button class="add-to-cart" onclick="addToCart('chickenBiryani', 200)">Add to Cart</button>
+</div>
+<div class="dish-details">
+    <img src="mutton.jpeg" alt="Mutton Biryani">
+    <h2>Mutton Biryani(COMBO)</h2>
+    <p>Flavorful mutton biryani with tender mutton and aromatic spices.</p>
+    <p>Price: ₹250</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Basmati rice</li>
+        <li>Onions</li>
+        <li>Tomatoes</li>
+        <li>Yogurt</li>
+        <li>Ginger-garlic paste</li>
+        <li>Mint leaves</li>
+        <li>Coriander leaves</li>
+        <li>Green chilies</li>
+        <li>Red chili powder</li>
+        <li>Turmeric powder</li>
+        <li>Garam masala powder</li>
+        <li>Bay leaves</li>
+        <li>Cloves</li>
+        <li>Cardamom pods</li>
+        <li>Cinnamon stick</li>
+        <li>Ghee</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Marinate Mutton:</strong> Mix mutton pieces with yogurt, ginger-garlic paste, red chili powder, turmeric powder, and salt. Marinate for at least 2 hours.</li>
+        <li><strong>Cook Rice:</strong> Boil the rice with bay leaves, cloves, cardamom, and cinnamon stick until 70% cooked. Drain and set aside.</li>
+        <li><strong>Fry Onions:</strong> Heat ghee in a large pot. Add sliced onions and fry until golden brown. Remove half of the fried onions and set aside.</li>
+        <li><strong>Prepare Mutton:</strong> In the same pot, add marinated mutton, chopped tomatoes, green chilies, mint, and coriander leaves. Cook until the mutton is tender.</li>
+        <li><strong>Layer and Cook:</strong> Layer the partially cooked rice over the mutton mixture. Top with the reserved fried onions, sprinkle garam masala powder, and drizzle some ghee. Cover tightly and cook on low heat (dum) for 30-40 minutes.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('muttonBiryani', 250)">Add to Cart</button>
+</div>
+<div class="dish-details">
+    <img src="egg bir.jpeg" alt="Egg Biryani">
+    <h2>Egg Biryani(COMBO)</h2>
+    <p>Aromatic egg biryani with boiled eggs and flavorful spices.</p>
+    <p>Price: ₹150</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Eggs</li>
+        <li>Basmati rice</li>
+        <li>Onions</li>
+        <li>Tomatoes</li>
+        <li>Yogurt</li>
+        <li>Ginger-garlic paste</li>
+        <li>Mint leaves</li>
+        <li>Coriander leaves</li>
+        <li>Green chilies</li>
+        <li>Red chili powder</li>
+        <li>Turmeric powder</li>
+        <li>Garam masala powder</li>
+        <li>Bay leaves</li>
+        <li>Cloves</li>
+        <li>Cardamom pods</li>
+        <li>Cinnamon stick</li>
+        <li>Ghee</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Boil Eggs:</strong> Boil the eggs, peel them, and set aside.</li>
+        <li><strong>Cook Rice:</strong> Boil the rice with bay leaves, cloves, cardamom, and cinnamon stick until 70% cooked. Drain and set aside.</li>
+        <li><strong>Fry Onions:</strong> Heat ghee in a large pot. Add sliced onions and fry until golden brown. Remove half of the fried onions and set aside.</li>
+        <li><strong>Prepare Masala:</strong> In the same pot, add chopped tomatoes, ginger-garlic paste, green chilies, mint, and coriander leaves. Cook until the tomatoes are soft.</li>
+        <li><strong>Layer and Cook:</strong> Layer the partially cooked rice over the masala mixture. Place boiled eggs on top. Top with the reserved fried onions, sprinkle garam masala powder, and drizzle some ghee. Cover tightly and cook on low heat (dum) for 20-25 minutes.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('eggBiryani', 150)">Add to Cart</button>
+</div>
+</div>
+<div class="dish-details">
+    <img src="vegbir.jpeg" alt="Vegetable Biryani">
+    <h2>Vegetable Biryani(COMBO)</h2>
+    <p>Delightful vegetable biryani with mixed vegetables and aromatic spices.</p>
+    <p>Price: ₹180</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Mixed vegetables (carrots, beans, peas, potatoes, cauliflower)</li>
+        <li>Basmati rice</li>
+        <li>Onions</li>
+        <li>Tomatoes</li>
+        <li>Yogurt</li>
+        <li>Ginger-garlic paste</li>
+        <li>Mint leaves</li>
+        <li>Coriander leaves</li>
+        <li>Green chilies</li>
+        <li>Red chili powder</li>
+        <li>Turmeric powder</li>
+        <li>Garam masala powder</li>
+        <li>Bay leaves</li>
+        <li>Cloves</li>
+        <li>Cardamom pods</li>
+        <li>Cinnamon stick</li>
+        <li>Ghee</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Prepare Vegetables:</strong> Chop the vegetables and set aside.</li>
+        <li><strong>Cook Rice:</strong> Boil the rice with bay leaves, cloves, cardamom, and cinnamon stick until 70% cooked. Drain and set aside.</li>
+        <li><strong>Fry Onions:</strong> Heat ghee in a large pot. Add sliced onions and fry until golden brown. Remove half of the fried onions and set aside.</li>
+        <li><strong>Prepare Masala:</strong> In the same pot, add chopped tomatoes, ginger-garlic paste, green chilies, mint, and coriander leaves. Add the mixed vegetables and cook until tender.</li>
+        <li><strong>Layer and Cook:</strong> Layer the partially cooked rice over the vegetable mixture. Top with the reserved fried onions, sprinkle garam masala powder, and drizzle some ghee. Cover tightly and cook on low heat (dum) for 20-25 minutes.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('vegetableBiryani', 180)">Add to Cart</button>
+</div>
+<br>
+<br>
+<br>
+<br>
+	
+<br>
+<br>
+<br>
+<br>
+    <footer>
+        <p><b>&#9742; Contact number: 9944699989<br>
+        &#9993; Email: kksupershopi2023@mail.com<br>
+        &#127752; Instagram: @kksupershoppie</b></p>
+    </footer>
+
+    <script>
+        function addToCart(name, price) {
+            const item = { name: name, price: price };
+            let cartContent = JSON.parse(localStorage.getItem('cartContent')) || [];
+            cartContent.push(item);
+            localStorage.setItem('cartContent', JSON.stringify(cartContent));
+            alert('Item added to cart!');
+        }
+    </script>
+</body>
+</html>

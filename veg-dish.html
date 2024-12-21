@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KK Shopiee - Dish Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+          header {
+            background-color: #9fdf9f;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        .logo {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 10px;
+            font-family: "Courier New", monospace;
+        }
+
+        .search-bar {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            width: 300px;
+            margin-right: 10px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .user-menu {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .user-menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .dish-details {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 5px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dish-details img {
+            width: 50%;
+            height: 50%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .dish-details h2 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dish-details p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .add-to-cart {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #2874f0;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 18px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #1e5ac8;
+        }
+
+        footer {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-family: "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="KK Shopiee Logo">
+                <a href="#">KK<br>Super Shoppie</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products, brands and more">
+                <button type="button">Search</button>
+            </div>
+            <div class="user-menu">
+                <a href="cart.html" id="cartButton">CART</a>
+            </div>
+        </div>
+    </header>
+    <div class="dish-details">
+    <img src="sambar.jpeg" alt="Sambar">
+    <h2>Sambar(COMBO)</h2>
+    <p>A traditional South Indian dish made with lentils and vegetables.</p>
+    <p>Price: ₹100</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Toor dal (pigeon pea lentils)</li>
+        <li>Tamarind</li>
+        <li>Mixed vegetables (carrots, drumsticks, beans, pumpkin)</li>
+        <li>Onions</li>
+        <li>Tomatoes</li>
+        <li>Sambar powder</li>
+        <li>Turmeric powder</li>
+        <li>Mustard seeds</li>
+        <li>Curry leaves</li>
+        <li>Dry red chilies</li>
+        <li>Asafoetida</li>
+        <li>Oil</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Cook Lentils:</strong> Cook toor dal with turmeric powder until soft and mash well.</li>
+        <li><strong>Prepare Tamarind Extract:</strong> Soak tamarind in water and extract the juice.</li>
+        <li><strong>Cook Vegetables:</strong> In a pot, cook mixed vegetables with water until tender.</li>
+        <li><strong>Add Dal and Spices:</strong> Add the cooked dal, tamarind extract, sambar powder, and salt to the vegetables. Simmer for 10 minutes.</li>
+        <li><strong>Tempering:</strong> Heat oil, add mustard seeds, dry red chilies, curry leaves, and asafoetida. Pour over the sambar and mix well.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('sambar', 100)">Add to Cart</button>
+</div>
+
+<div class="dish-details">
+    <img src="rasam.jpeg" alt="Rasam">
+    <h2>Rasam(COMBO)</h2>
+    <p>A tangy and spicy South Indian soup made with tamarind and spices.</p>
+    <p>Price: ₹80</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Tamarind</li>
+        <li>Tomatoes</li>
+        <li>Rasam powder</li>
+        <li>Turmeric powder</li>
+        <li>Mustard seeds</li>
+        <li>Cumin seeds</li>
+        <li>Curry leaves</li>
+        <li>Dry red chilies</li>
+        <li>Asafoetida</li>
+        <li>Garlic</li>
+        <li>Coriander leaves</li>
+        <li>Oil</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Prepare Tamarind Extract:</strong> Soak tamarind in water and extract the juice.</li>
+        <li><strong>Cook Base:</strong> Boil tamarind extract with chopped tomatoes, turmeric powder, rasam powder, and salt.</li>
+        <li><strong>Add Water:</strong> Add water to the mixture and bring to a boil. Simmer for 10 minutes.</li>
+        <li><strong>Tempering:</strong> Heat oil, add mustard seeds, cumin seeds, dry red chilies, curry leaves, and asafoetida. Pour over the rasam and mix well.</li>
+        <li><strong>Garnish:</strong> Add crushed garlic and chopped coriander leaves before serving.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('rasam', 80)">Add to Cart</button>
+</div>
+
+<div class="dish-details">
+    <img src="kara.jpeg" alt="Kara Kulambu">
+    <h2>Kara Kulambu(COMBO)</h2>
+    <p>A spicy and tangy South Indian curry made with tamarind and spices.</p>
+    <p>Price: ₹120</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Tamarind</li>
+        <li>Onions</li>
+        <li>Tomatoes</li>
+        <li>Brinjal (eggplant)</li>
+        <li>Lady's finger (okra)</li>
+        <li>Sambar powder</li>
+        <li>Turmeric powder</li>
+        <li>Mustard seeds</li>
+        <li>Fenugreek seeds</li>
+        <li>Curry leaves</li>
+        <li>Dry red chilies</li>
+        <li>Asafoetida</li>
+        <li>Oil</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Prepare Tamarind Extract:</strong> Soak tamarind in water and extract the juice.</li>
+        <li><strong>Fry Vegetables:</strong> Heat oil and fry brinjal and lady's finger until half-cooked.</li>
+        <li><strong>Cook Base:</strong> In a pot, sauté onions and tomatoes. Add turmeric powder, sambar powder, and salt. Add the tamarind extract and bring to a boil.</li>
+        <li><strong>Add Vegetables:</strong> Add the fried vegetables to the tamarind mixture and cook until tender.</li>
+        <li><strong>Tempering:</strong> Heat oil, add mustard seeds, fenugreek seeds, dry red chilies, curry leaves, and asafoetida. Pour over the kulambu and mix well.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('karaKulambu', 120)">Add to Cart</button>
+</div>
+
+<div class="dish-details">
+    <img src="mor.jpeg" alt="Moru Kulambu">
+    <h2>Moru Kulambu(COMBO)</h2>
+    <p>A traditional South Indian yogurt-based curry with spices.</p>
+    <p>Price: ₹90</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Yogurt</li>
+        <li>Turmeric powder</li>
+        <li>Chili powder</li>
+        <li>Mustard seeds</li>
+        <li>Cumin seeds</li>
+        <li>Fenugreek seeds</li>
+        <li>Curry leaves</li>
+        <li>Dry red chilies</li>
+        <li>Asafoetida</li>
+        <li>Green chilies</li>
+        <li>Coconut (optional)</li>
+        <li>Oil</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Prepare Yogurt Mixture:</strong> Whisk yogurt with turmeric powder, chili powder, and salt.</li>
+        <li><strong>Cook Base:</strong> Heat oil, add mustard seeds, cumin seeds, fenugreek seeds, dry red chilies, and curry leaves. Add asafoetida and green chilies.</li>
+        <li><strong>Add Yogurt:</strong> Lower the heat and add the whisked yogurt mixture. Stir continuously to prevent curdling.</li>
+        <li><strong>Add Coconut Paste (optional):</strong> Grind coconut with some water to make a paste and add to the mixture. Cook for a few more minutes.</li>
+        <li><strong>Simmer:</strong> Allow the mixture to simmer on low heat for 5-10 minutes. Do not boil.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('moruKulambu', 90)">Add to Cart</button>
+</div>
+
+	
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	
+    <footer>
+        <p><b>&#9742; Contact number: 9944699989<br>
+        &#9993; Email: kksupershopi2023@mail.com<br>
+        &#127752; Instagram: @kksupershoppie</b></p>
+    </footer>
+
+    <script>
+        function addToCart(name, price) {
+            const item = { name: name, price: price };
+            let cartContent = JSON.parse(localStorage.getItem('cartContent')) || [];
+            cartContent.push(item);
+            localStorage.setItem('cartContent', JSON.stringify(cartContent));
+            alert('Item added to cart!');
+        }
+    </script>
+</body>
+</html>

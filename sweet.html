@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KK Shopiee - Dish Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+          header {
+            background-color: #9fdf9f;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        .logo {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 10px;
+            font-family: "Courier New", monospace;
+        }
+
+        .search-bar {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            width: 300px;
+            margin-right: 10px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .user-menu {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .user-menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+
+        .dish-details {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 5px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dish-details img {
+            width: 50%;
+            height: 50%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .dish-details h2 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dish-details p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .add-to-cart {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #2874f0;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 18px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #1e5ac8;
+        }
+
+        footer {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-family: "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="KK Shopiee Logo">
+                <a href="#">KK<br>Super Shoppie</a>
+            </div>
+            <div class="user-menu">
+                <a href="cart.html" id="cartButton">CART</a>
+            </div>
+        </div>
+    </header>
+<div class="dish-details">
+    <img src="ladd.jpeg" alt="Laddu">
+    <h2>Laddu(COMBO)</h2>
+    <p>A popular Indian sweet made from gram flour and sugar.</p>
+    <p>Price: ₹20 per piece</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Besan (gram flour)</li>
+        <li>Ghee (clarified butter)</li>
+        <li>Sugar</li>
+        <li>Cardamom powder</li>
+        <li>Nuts (optional)</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Roast Besan:</strong> Roast besan in ghee until golden brown and aromatic.</li>
+        <li><strong>Add Sugar:</strong> Mix roasted besan with powdered sugar and cardamom powder.</li>
+        <li><strong>Shape:</strong> Shape into round balls (laddus) while still warm.</li>
+        <li><strong>Optional:</strong> Garnish with nuts if desired.</li>
+        <li><strong>Serve:</strong> Serve at room temperature.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('laddu', 20)">Add to Cart</button>
+</div>
+
+<div class="dish-details">
+    <img src="jal.jpeg" alt="Jalebi">
+    <h2>Jalebi(COMBO)</h2>
+    <p>A crispy and syrupy Indian sweet made from fermented batter.</p>
+    <p>Price: ₹30 per piece</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>All-purpose flour (maida)</li>
+        <li>Yogurt</li>
+        <li>Sugar</li>
+        <li>Saffron strands</li>
+        <li>Cardamom powder</li>
+        <li>Oil (for frying)</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Prepare Batter:</strong> Ferment maida and yogurt batter for a few hours.</li>
+        <li><strong>Make Sugar Syrup:</strong> Boil sugar with water until syrupy consistency, add saffron and cardamom powder.</li>
+        <li><strong>Fry Jalebis:</strong> Heat oil, pour batter in concentric circles, fry until crisp and golden.</li>
+        <li><strong>Dip in Syrup:</strong> Dip fried jalebis in warm sugar syrup for a few seconds.</li>
+        <li><strong>Serve:</strong> Serve hot or warm.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('jalebi', 30)">Add to Cart</button>
+</div>
+
+<div class="dish-details">
+    <img src="gul.jpeg" alt="Gulab Jamun">
+    <h2>Gulab Jamun(COMBO)</h2>
+    <p>A classic Indian dessert made from khoya and soaked in sugar syrup.</p>
+    <p>Price: ₹25 per piece</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Khoya (milk solids)</li>
+        <li>All-purpose flour (maida)</li>
+        <li>Milk</li>
+        <li>Ghee (clarified butter)</li>
+        <li>Sugar</li>
+        <li>Cardamom powder</li>
+        <li>Rose water</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Prepare Dough:</strong> Mix khoya, maida, and milk to make a soft dough.</li>
+        <li><strong>Shape:</strong> Shape into small balls (jamuns).</li>
+        <li><strong>Fry:</strong> Deep fry in ghee until golden brown.</li>
+        <li><strong>Soak:</strong> Soak fried jamuns in sugar syrup flavored with cardamom and rose water.</li>
+        <li><strong>Serve:</strong> Serve warm or at room temperature.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('gulabJamun', 25)">Add to Cart</button>
+</div>
+
+<div class="dish-details">
+    <img src="my.jpeg" alt="Mysore Pak">
+    <h2>Mysore Pak(COMBO)</h2>
+    <p>A rich and melt-in-mouth Indian sweet made from gram flour, ghee, and sugar.</p>
+    <p>Price: ₹40 per piece</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Besan (gram flour)</li>
+        <li>Ghee (clarified butter)</li>
+        <li>Sugar</li>
+        <li>Water</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Prepare Sugar Syrup:</strong> Boil sugar with water until one-string consistency.</li>
+        <li><strong>Mix Ingredients:</strong> Mix besan and ghee in a separate pan.</li>
+        <li><strong>Cook:</strong> Cook besan-ghee mixture on low heat until aromatic and golden brown.</li>
+        <li><strong>Add Syrup:</strong> Add hot sugar syrup gradually while stirring continuously.</li>
+        <li><strong>Set:</strong> Pour mixture into a greased tray, let it cool, and cut into pieces.</li>
+        <li><strong>Serve:</strong> Serve at room temperature.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('mysorePak', 40)">Add to Cart</button>
+</div>
+
+<div class="dish-details">
+    <img src="pal.jpeg" alt="Palkova">
+    <h2>Palkova(COMBO)</h2>
+    <p>A creamy and rich Indian milk sweet made from milk and sugar.</p>
+    <p>Price: ₹50 per piece</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Milk</li>
+        <li>Sugar</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Reduce Milk:</strong> Boil milk until it reduces to a thick consistency.</li>
+        <li><strong>Add Sugar:</strong> Add sugar and continue cooking until it thickens further.</li>
+        <li><strong>Cool:</strong> Let it cool and set in a greased tray.</li>
+        <li><strong>Set:</strong> Cut into desired shapes and serve.</li>
+        <li><strong>Serve:</strong> Serve at room temperature.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('palkova', 50)">Add to Cart</button>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+	
+<br>
+<br>
+<br>
+<br>
+    <footer>
+        <p><b>&#9742; Contact number: 9944699989<br>
+        &#9993; Email: kksupershopi2023@mail.com<br>
+        &#127752; Instagram: @kksupershoppie</b></p>
+    </footer>
+
+    <script>
+        function addToCart(name, price) {
+            const item = { name: name, price: price };
+            let cartContent = JSON.parse(localStorage.getItem('cartContent')) || [];
+            cartContent.push(item);
+            localStorage.setItem('cartContent', JSON.stringify(cartContent));
+            alert('Item added to cart!');
+        }
+    </script>
+</body>
+</html>

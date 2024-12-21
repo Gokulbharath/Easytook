@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KK Shopiee - Dish Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+          header {
+            background-color: #9fdf9f;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        .logo {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 10px;
+            font-family: "Courier New", monospace;
+        }
+
+        .search-bar {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            width: 300px;
+            margin-right: 10px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .user-menu {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .user-menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+
+        .dish-details {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 5px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dish-details img {
+            width: 50%;
+            height: 50%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .dish-details h2 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dish-details p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .add-to-cart {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #2874f0;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 18px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #1e5ac8;
+        }
+
+        footer {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-family: "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="KK Shopiee Logo">
+                <a href="#">KK<br>Super Shoppie</a>
+            </div>
+            <div class="user-menu">
+                <a href="cart.html" id="cartButton">CART</a>
+            </div>
+        </div>
+    </header>
+<div class="dish-details">
+    <img src="por.jpeg" alt="Porota">
+    <h2>Porota(COMBO)</h2>
+    <p>A flaky and layered South Indian flatbread.</p>
+    <p>Price: ₹50</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>All-purpose flour (maida)</li>
+        <li>Water</li>
+        <li>Salt</li>
+        <li>Oil</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Prepare Dough:</strong> Mix all-purpose flour, salt, and water to make a soft dough. Rest for 30 minutes.</li>
+        <li><strong>Roll and Layer:</strong> Divide the dough into balls, roll into thin circles, and brush with oil. Fold into pleats and roll into a spiral.</li>
+        <li><strong>Cook:</strong> Heat a griddle (tawa), place the rolled dough, and cook both sides until golden brown, brushing with oil.</li>
+        <li><strong>Serve:</strong> Serve hot with curry or salna.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('porota', 50)">Add to Cart</button>
+</div>
+
+<div class="dish-details">
+    <img src="sal.jpeg" alt="Salna">
+    <h2>Salna(COMBO)</h2>
+    <p>A spicy and flavorful South Indian curry served with porota or parotta.</p>
+    <p>Price: ₹80</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Onions</li>
+        <li>Tomatoes</li>
+        <li>Coconut milk</li>
+        <li>Curry masala powder</li>
+        <li>Fennel seeds</li>
+        <li>Cloves</li>
+        <li>Cinnamon stick</li>
+        <li>Bay leaves</li>
+        <li>Green chilies</li>
+        <li>Coriander leaves</li>
+        <li>Oil</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Sauté Ingredients:</strong> Sauté onions, tomatoes, green chilies, and spices in oil until soft.</li>
+        <li><strong>Add Coconut Milk:</strong> Add coconut milk and curry masala powder. Simmer until flavors meld.</li>
+        <li><strong>Adjust Seasoning:</strong> Adjust salt and spices according to taste.</li>
+        <li><strong>Serve:</strong> Serve hot with porota or parotta.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('salna', 80)">Add to Cart</button>
+</div>
+
+<div class="dish-details">
+    <img src="ps.jpeg" alt="Poori Masala">
+    <h2>Poori Masala(COMBO)</h2>
+    <p>A classic South Indian dish of spiced potato curry served with poori.</p>
+    <p>Price: ₹70</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Potatoes</li>
+        <li>Onions</li>
+        <li>Tomatoes</li>
+        <li>Green chilies</li>
+        <li>Ginger</li>
+        <li>Curry leaves</li>
+        <li>Mustard seeds</li>
+        <li>Urad dal (black gram)</li>
+        <li>Turmeric powder</li>
+        <li>Red chili powder</li>
+        <li>Coriander powder</li>
+        <li>Garam masala powder</li>
+        <li>Oil</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Cook Potatoes:</strong> Boil potatoes until soft, peel, and mash coarsely.</li>
+        <li><strong>Sauté Ingredients:</strong> Sauté onions, tomatoes, green chilies, ginger, and spices in oil until onions are translucent.</li>
+        <li><strong>Add Potatoes:</strong> Add mashed potatoes and cook until well combined with the spices.</li>
+        <li><strong>Adjust Seasoning:</strong> Adjust salt and spices according to taste.</li>
+        <li><strong>Serve:</strong> Serve hot with poori.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('pooriMasala', 70)">Add to Cart</button>
+</div>
+
+<div class="dish-details">
+    <img src="allu.jpeg" alt="Alu Porata">
+    <h2>Alu Porata(COMBO)</h2>
+    <p>A delicious South Indian stuffed potato flatbread.</p>
+    <p>Price: ₹60</p>
+    <h3>Ingredients:</h3>
+    <ul>
+        <li>Wheat flour</li>
+        <li>Potatoes</li>
+        <li>Onions</li>
+        <li>Green chilies</li>
+        <li>Ginger</li>
+        <li>Coriander leaves</li>
+        <li>Cumin seeds</li>
+        <li>Turmeric powder</li>
+        <li>Red chili powder</li>
+        <li>Garam masala powder</li>
+        <li>Oil</li>
+        <li>Salt</li>
+    </ul>
+    <h3>Process:</h3>
+    <ol>
+        <li><strong>Prepare Dough:</strong> Mix wheat flour, salt, and water to make a soft dough. Rest for 30 minutes.</li>
+        <li><strong>Prepare Filling:</strong> Boil potatoes until soft, peel, and mash. Sauté with onions, green chilies, ginger, and spices.</li>
+        <li><strong>Roll and Stuff:</strong> Divide dough into balls, roll into circles, place filling in the center, seal, and roll into a flatbread.</li>
+        <li><strong>Cook:</strong> Heat a griddle (tawa), place the stuffed flatbread, and cook both sides until golden brown, brushing with oil.</li>
+        <li><strong>Serve:</strong> Serve hot with yogurt or chutney.</li>
+    </ol>
+    <a href="https://www.youtube.com/watch?v=your_youtube_link" target="_blank">Watch Recipe Video</a>
+    <button class="add-to-cart" onclick="addToCart('aluPorata', 60)">Add to Cart</button>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+	
+<br>
+<br>
+<br>
+<br>
+    <footer>
+        <p><b>&#9742; Contact number: 9944699989<br>
+        &#9993; Email: kksupershopi2023@mail.com<br>
+        &#127752; Instagram: @kksupershoppie</b></p>
+    </footer>
+
+    <script>
+        function addToCart(name, price) {
+            const item = { name: name, price: price };
+            let cartContent = JSON.parse(localStorage.getItem('cartContent')) || [];
+            cartContent.push(item);
+            localStorage.setItem('cartContent', JSON.stringify(cartContent));
+            alert('Item added to cart!');
+        }
+    </script>
+</body>
+</html>
